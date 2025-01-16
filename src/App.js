@@ -15,8 +15,6 @@ function App() {
     getPosts();
   }, []);
 
-  console.log(posts[0], 1111);
-
   return (
     <div className="App">
       <header className="App-header">
@@ -35,6 +33,7 @@ function App() {
       </header>
       <div>
         {posts.map((item) => {
+          console.log(item.content.rendered, 1111);
           return (
             <>
               <h2 dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
